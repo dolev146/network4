@@ -12,7 +12,7 @@ better_ping: better_ping.o
 	$(CC) $(CFLAGS) $< -o partb
 
 watchdog: watchdog.o
-	$(CC) $(CFLAGS) watchdog.c -o watchdog
+	$(CC) $(CFLAGS) watchdog.c -o watchdog -lrt
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $<
